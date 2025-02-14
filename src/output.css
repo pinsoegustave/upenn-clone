@@ -1,4 +1,5 @@
 /*! tailwindcss v4.0.6 | MIT License | https://tailwindcss.com */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -256,7 +257,7 @@
     --breakpoint-md: 48rem;
     --breakpoint-lg: 64rem;
     --breakpoint-xl: 80rem;
-    --breakpoint-2xl: 96rem;
+    --breakpoint-2xl: 100rem;
     --container-3xs: 16rem;
     --container-2xs: 18rem;
     --container-xs: 20rem;
@@ -374,6 +375,8 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --breakpoint-xs: 30rem;
+    --breakpoint-3xl: 120rem;
   }
 }
 @layer base {
@@ -658,6 +661,9 @@
   }
   .container {
     width: 100%;
+    @media (width >= 30rem) {
+      max-width: 30rem;
+    }
     @media (width >= 40rem) {
       max-width: 40rem;
     }
@@ -670,12 +676,18 @@
     @media (width >= 80rem) {
       max-width: 80rem;
     }
-    @media (width >= 96rem) {
-      max-width: 96rem;
+    @media (width >= 100rem) {
+      max-width: 100rem;
+    }
+    @media (width >= 120rem) {
+      max-width: 120rem;
     }
   }
   .container\! {
     width: 100% !important;
+    @media (width >= 30rem) {
+      max-width: 30rem !important;
+    }
     @media (width >= 40rem) {
       max-width: 40rem !important;
     }
@@ -688,9 +700,36 @@
     @media (width >= 80rem) {
       max-width: 80rem !important;
     }
-    @media (width >= 96rem) {
-      max-width: 96rem !important;
+    @media (width >= 100rem) {
+      max-width: 100rem !important;
     }
+    @media (width >= 120rem) {
+      max-width: 120rem !important;
+    }
+  }
+  .m-14 {
+    margin: calc(var(--spacing) * 14);
+  }
+  .mx-14 {
+    margin-inline: calc(var(--spacing) * 14);
+  }
+  .mx-16 {
+    margin-inline: calc(var(--spacing) * 16);
+  }
+  .-mt-10 {
+    margin-top: calc(var(--spacing) * -10);
+  }
+  .-mt-14 {
+    margin-top: calc(var(--spacing) * -14);
+  }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .ml-4 {
+    margin-left: calc(var(--spacing) * 4);
   }
   .box-border {
     box-sizing: border-box;
@@ -793,6 +832,9 @@
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
+  }
+  .w-full {
+    width: 100%;
   }
   .w-screen {
     width: 100vw;
@@ -1345,6 +1387,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-1 {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-x {
     border-inline-style: var(--tw-border-style);
     border-inline-width: 1px;
@@ -1401,20 +1447,50 @@
     --tw-border-style: solid;
     border-style: solid;
   }
+  .border-amber-300 {
+    border-color: var(--color-amber-300);
+  }
+  .border-gray-300 {
+    border-color: var(--color-gray-300);
+  }
+  .border-gray-700 {
+    border-color: var(--color-gray-700);
+  }
+  .border-gray-800 {
+    border-color: var(--color-gray-800);
+  }
+  .border-red-300 {
+    border-color: var(--color-red-300);
+  }
+  .border-white {
+    border-color: var(--color-white);
+  }
   .bg-\(--my_variable\) {
     background-color: var(--my_variable);
   }
   .bg-\(color\:--my-color\) {
     background-color: var(--my-color);
   }
+  .bg-\[\#011f5b\] {
+    background-color: #011f5b;
+  }
   .bg-\[\#0088cc\] {
     background-color: #0088cc;
+  }
+  .bg-\[bg-amber-300\] {
+    background-color: bg-amber-300;
+  }
+  .bg-\[bg-amber-red\] {
+    background-color: bg-amber-red;
   }
   .bg-\[color\:var\(--my-color\)\] {
     background-color: var(--my-color);
   }
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
+  }
+  .bg-amber-300 {
+    background-color: var(--color-amber-300);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
@@ -1594,6 +1670,15 @@
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
+  }
+  .p-14 {
+    padding: calc(var(--spacing) * 14);
+  }
   .text-center {
     text-align: center;
   }
@@ -1636,17 +1721,19 @@
   .align-top {
     vertical-align: top;
   }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  .text-\[18px\] {
+    font-size: 18px;
+  }
+  .text-\[28px\] {
+    font-size: 28px;
+  }
+  .leading-\[35px\] {
+    --tw-leading: 35px;
+    line-height: 35px;
   }
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
   }
   .text-balance {
     text-wrap: balance;
@@ -1721,8 +1808,8 @@
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
   }
-  .text-red-500 {
-    color: var(--color-red-500);
+  .text-white {
+    color: var(--color-white);
   }
   .capitalize {
     text-transform: capitalize;
@@ -2167,6 +2254,53 @@
   .transform-view {
     transform-box: view-box;
   }
+  .hover\:no-underline {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: none;
+      }
+    }
+  }
+  .md\:m-14 {
+    @media (width >= 48rem) {
+      margin: calc(var(--spacing) * 14);
+    }
+  }
+  .md\:ml-18 {
+    @media (width >= 48rem) {
+      margin-left: calc(var(--spacing) * 18);
+    }
+  }
+}
+.poppins-light {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.poppins-medium {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.poppins-light-italic {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+.poppins-regular-italic {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.eb-garamond {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 @keyframes spin {
   to {
@@ -2292,10 +2426,6 @@
   initial-value: 0;
 }
 @property --tw-leading {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }

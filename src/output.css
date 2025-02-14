@@ -800,6 +800,36 @@
   .mt-24 {
     margin-top: calc(var(--spacing) * 24);
   }
+  .mt-\[20\%\] {
+    margin-top: 20%;
+  }
+  .mt-\[25\%\] {
+    margin-top: 25%;
+  }
+  .mt-\[26\%\] {
+    margin-top: 26%;
+  }
+  .mt-\[26\.3\%\] {
+    margin-top: 26.3%;
+  }
+  .mt-\[26\.4\%\] {
+    margin-top: 26.4%;
+  }
+  .mt-\[26\.5\%\] {
+    margin-top: 26.5%;
+  }
+  .mt-\[27\%\] {
+    margin-top: 27%;
+  }
+  .mt-\[30\%\] {
+    margin-top: 30%;
+  }
+  .-mr-20 {
+    margin-right: calc(var(--spacing) * -20);
+  }
+  .mr-20 {
+    margin-right: calc(var(--spacing) * 20);
+  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -911,6 +941,9 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-3 {
+    height: calc(var(--spacing) * 3);
+  }
   .h-\[500px\] {
     height: 500px;
   }
@@ -995,6 +1028,9 @@
   .w-\[10px\] {
     width: 10px;
   }
+  .w-\[10vw\] {
+    width: 10vw;
+  }
   .w-\[20px\] {
     width: 20px;
   }
@@ -1018,6 +1054,15 @@
   }
   .w-\[50px\] {
     width: 50px;
+  }
+  .w-\[50vw\] {
+    width: 50vw;
+  }
+  .w-\[70vw\] {
+    width: 70vw;
+  }
+  .w-\[80vw\] {
+    width: 80vw;
   }
   .w-full {
     width: 100%;
@@ -1439,6 +1484,9 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
+  }
   .space-y-reverse {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 1;
@@ -1523,6 +1571,15 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+  .overflow-auto {
+    overflow: auto;
+  }
+  .overflow-clip {
+    overflow: clip;
+  }
+  .overflow-x-auto {
+    overflow-x: auto;
   }
   .scroll-auto {
     scroll-behavior: auto;
@@ -1707,6 +1764,9 @@
   .border-green-500 {
     border-color: var(--color-green-500);
   }
+  .border-green-600 {
+    border-color: var(--color-green-600);
+  }
   .border-red-500 {
     border-color: var(--color-red-500);
   }
@@ -1722,6 +1782,9 @@
   .bg-\(color\:--my-color\) {
     background-color: var(--my-color);
   }
+  .bg-\[\#990001\] {
+    background-color: #990001;
+  }
   .bg-\[\#9BA5BE\] {
     background-color: #9BA5BE;
   }
@@ -1736,9 +1799,6 @@
   }
   .bg-\[\#990000\] {
     background-color: #990000;
-  }
-  .bg-\[\#990001\] {
-    background-color: #990001;
   }
   .bg-\[\#F3F3F4\] {
     background-color: #F3F3F4;

@@ -41,3 +41,25 @@
     /* font-weight: <weight>; */
     font-style: normal;
   }
+
+.backImage {
+    display: grid;
+    place-items: center;
+    position: relative;
+    background-color: black;
+}
+
+.backImage::before {
+    background-image: url('/images/avian-bird-flu.jpeg');
+    background-size: cover;
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.3;
+}
+/* .intro-show:hover {
+    
+}
+.intro-hidden {
+    display: none;
+} */

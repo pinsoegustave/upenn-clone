@@ -1869,6 +1869,9 @@
   .bg-\[\#f7f7f7\] {
     background-color: #f7f7f7;
   }
+  .bg-\[\#ffffff\] {
+    background-color: #ffffff;
+  }
   .bg-\[color\:var\(--my-color\)\] {
     background-color: var(--my-color);
   }

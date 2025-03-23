@@ -2768,6 +2768,11 @@
       margin-left: calc(var(--spacing) * 24);
     }
   }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
   .md\:w-\[40vw\] {
     @media (width >= 48rem) {
       width: 40vw;
